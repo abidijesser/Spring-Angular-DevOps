@@ -1,0 +1,16 @@
+global:
+  scrape_interval: 15s  # How often to scrape targets
+
+scrape_configs:
+  - job_name: 'sonarqube'
+    static_configs:
+      - targets: ['192.168.33.10:9000']
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']  # Prometheus server itself
+
+
+
+
+
